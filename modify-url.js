@@ -37,8 +37,10 @@ function updateValueForKey(queryStrings, key, value) {
 	var isNewKey = true;
 	for (var i in oldQueryStrings) {
 		var currItem = oldQueryStrings[i];
-		var searchKey = key + "=";
-		if (currItem.indexOf(searchKey) != -1) {
+		var arrKeyValue = currItem.split("=");
+		var currKey = arrKeyValue[0];
+		var currValue = arrKeyValue[1];
+		if (key == currKey) {
 			currItem = encodeURIComponent(key) + "=" + encodeURIComponent(value);
 			isNewKey = false;
 		}

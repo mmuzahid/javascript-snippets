@@ -13,3 +13,10 @@ WebTools
     ``console.log(modifiedUrl.path);`` will print ``/search`` as path value
     
     ``modifiedUrl.host`` will return ``www.google.com`` as host value
+
+- **textnode-decorator.js** : Decorate plain text node by some callback function to change its content.
+  - Sample code: 
+  
+    ``decorateChildTextNode(document, funcNewNodeHTML);`` 
+    
+      Above code will replace each text node of document by given callback function's output. 

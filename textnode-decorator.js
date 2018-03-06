@@ -8,7 +8,7 @@
 
 /**
 * decorate given text node by using callback function 
-* e.g. code sample to convert all 'google' word to <strong>google</strong>: decorateChildTextNode(document, strongGoogle);
+* e.g. code sample to convert all 'GitHub' word to <strong>GitHub</strong> call function as decorateChildTextNode(document, boldGitHubText);
 */
 function decorateTextNode(textNode, decoratorFunc) {
 	if (textNode == undefined || textNode.nodeType != document.TEXT_NODE) {
@@ -30,7 +30,7 @@ function decorateTextNode(textNode, decoratorFunc) {
 
 /**
 * decorate all child text node by using callback function 
-* e.g. code sample to convert all 'google' word to <strong>google</strong>: decorateChildTextNode(document, strongGoogle);
+* e.g. code sample to convert all 'GitHub' word to <strong>GitHub</strong>: decorateChildTextNode(document, boldGitHubText);
 */
 function decorateChildTextNode(parentElement, decoratorFunc) {
 	if (parentElement == undefined || parentElement.nodeType == document.COMMENT_NODE || parentElement.nodeName == 'A') {
@@ -47,8 +47,8 @@ function decorateChildTextNode(parentElement, decoratorFunc) {
 	}
 }
 
-/** This is a sample callback function to convert 'google' text word to <strong>google</strong>*/
-function strongGoogle(textNodeContent) {
+/** This is a sample callback function to convert 'GitHub' text word to <strong>GitHub</strong>*/
+function boldGitHubText(textNodeContent) {
 	var lines = textNodeContent.split('\n');
 	var decoratedLines = [];
 
@@ -57,7 +57,7 @@ function strongGoogle(textNodeContent) {
 		var decoratedWords = [];
 		for (var w = 0; w < wordArr.length; w++) {
 			var word = wordArr[w];
-			if (word.toLowerCase() == 'google') {
+			if (word.toLowerCase() == 'GitHub') {
 				decoratedWords.push('<strong>' + word + '</strong>');
 			} else {
 				decoratedWords.push(word);

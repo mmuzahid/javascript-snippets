@@ -20,3 +20,6 @@ WebTools
     ``decorateChildTextNode(document, funcNewNodeHTML);`` 
     
       Above code will replace each text node of document by given callback function's output. 
+
+- **jquery-dialog-hack-iframewrapper.js** : This is a jquery-dialog hack to show html content inside an iframe. 
+One of the usecases is showing html content as a html preview in a jquery-dialog. By this technique current CSS will not be applied to dialog html as we wrapped it by an iframe.
